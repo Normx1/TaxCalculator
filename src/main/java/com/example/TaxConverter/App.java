@@ -26,17 +26,17 @@ public class App extends HttpServlet {
         String gender = req.getParameter("gender");
         String region = req.getParameter("region");
         String[] courses = req.getParameterValues("courses");
-        Double salary = Double.valueOf(req.getParameter("salary"));
+        Double taxes = Double.valueOf(req.getParameter("salary"));
         Double baseValue = Double.valueOf(req.getParameter("baseValue"));
-        salary = (new Logic(region, last_name, gender, salary, baseValue)).allTax();
-        System.out.println(salary);
+        taxes = (new Logic(region, last_name, gender, taxes, baseValue)).allTax();
+        System.out.println(taxes);
 
         try {
             writer.println("<p>First name: " + first_name + "</p>");
             writer.println("<p>Last name: " + last_name + "</p>");
             writer.println("<p>Gender: " + gender + "</p>");
             writer.println("<p>Region: " + region + "</p>");
-            writer.println("<p>Salary: " + salary + "</p>");
+            writer.printf("<p>Taxes:  %.2f %n Rub", taxes );
          } finally {
             writer.close();
 

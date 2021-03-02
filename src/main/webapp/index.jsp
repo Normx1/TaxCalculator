@@ -45,7 +45,7 @@
             Salary: <input type="number" step="0.01" min="0.01" name="salary" required/>
             <br/>
             <br/>
-            Base value: <input type="number" step="0.01" min="0.01" name="baseValue" required/>
+            Base value: <input type="number" step="0.01" min="0.01"  name="baseValue" required/>
         </label>
         <br/>
         <br/>
