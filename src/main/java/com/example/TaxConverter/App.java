@@ -37,6 +37,7 @@ public class App extends HttpServlet {
             writer.println("<p>Gender: " + gender + "</p>");
             writer.println("<p>Region: " + region + "</p>");
             writer.printf("<p>Taxes:  %.2f %n Rub", taxes );
+
          } finally {
             writer.close();
 
